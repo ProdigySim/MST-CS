@@ -1,0 +1,96 @@
+//////////////////////////////////////////////////////////////////////
+/// @file queue.h
+/// @author Michael Busby CS153 1B
+/// @brief Declaration for Queue class
+////////////////////////////////////////////////////////////////////// 
+#ifndef QUEUE_H
+#define QUEUE_H
+
+#include "exception.h"
+#include "node.h"
+
+//////////////////////////////////////////////////////////////////////
+/// @class Queue
+/// @brief This class manages an expandable array of data of any 
+/// generic type
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Queue::Queue()
+/// @brief This functioninitializes the private variables of the 
+/// Queue class
+/// @pre Queue should be uninitialized
+/// @post m_size is set to 0 and m_front is set to NULL
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Queue::~Queue()
+/// @brief This function frees memory dynamically allocated in the 
+/// Queue class upon leaving scope
+/// @pre Queue should be Initialized
+/// @post Calls m_clear(), memory allocated for queue is destoryed
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Queue::push( generic )
+/// @brief This function adds an element to the back of the Queue
+/// @pre Must have enough memory for one generic and two node pointers
+/// @post size is incremented and another generic node is added
+/// to the back of the queue
+/// @param x holds a variable to add of the same type as the class
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Queue::pop()
+/// @brief This function removes an element from the front of the Queue
+/// @pre size must be greater than 0
+/// @post size is decremented, the node on the front of the queue is
+/// destroyed
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+/// @fn generic & Queue::front();
+/// @brief This function returns the first element of the Queue
+/// @pre m_size must be at least 1
+/// @post none
+/// @return generic element of from the front of the Queue
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn generic & Queue::back();
+/// @brief This function returns the last element of the Queue
+/// @pre size must be at least 1
+/// @post none
+/// @return generic element of from the back of the Queue
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn unsigned int Queue::size()
+/// @brief This function returns the number of elements in the Queue
+/// @return returns size of the Queue
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn bool Queue::empty()
+/// @brief This function will check if the Queue is empty.
+/// @return returns true if empty, false if not empty
+//////////////////////////////////////////////////////////////////////
+
+#include "list.h"
+
+template <class generic>
+class Queue : private List<generic>
+{
+  public:
+    Queue(){}
+    ~Queue(){}
+    bool empty();
+    unsigned int size();
+    generic & front();
+    generic & back();
+    void push( generic x );
+    void pop();
+};
+
+#include "queue.hpp"
+#endif

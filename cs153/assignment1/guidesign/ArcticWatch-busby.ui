@@ -1,0 +1,394 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>323</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>26</y>
+     <width>485</width>
+     <height>274</height>
+    </rect>
+   </property>
+   <widget class="QTabWidget" name="tabWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>471</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="currentIndex" >
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="data_view" >
+     <property name="geometry" >
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>467</width>
+       <height>233</height>
+      </rect>
+     </property>
+     <attribute name="title" >
+      <string>Data View</string>
+     </attribute>
+     <widget class="QLabel" name="label" >
+      <property name="geometry" >
+       <rect>
+        <x>9</x>
+        <y>9</y>
+        <width>91</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Sensor Selector</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox" >
+      <property name="geometry" >
+       <rect>
+        <x>107</x>
+        <y>9</y>
+        <width>351</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text" >
+        <string>North East Quadrant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text" >
+        <string>North West Quadrant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text" >
+        <string>South West Quadrant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text" >
+        <string>South East Quadrant</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_2" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Latitude</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit" >
+      <property name="geometry" >
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Longitude</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5" >
+      <property name="geometry" >
+       <rect>
+        <x>90</x>
+        <y>80</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2" >
+      <property name="geometry" >
+       <rect>
+        <x>90</x>
+        <y>110</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Time</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>71</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Play Speed</string>
+      </property>
+     </widget>
+     <widget class="QDial" name="dial" >
+      <property name="geometry" >
+       <rect>
+        <x>80</x>
+        <y>130</y>
+        <width>50</width>
+        <height>64</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6" >
+      <property name="geometry" >
+       <rect>
+        <x>230</x>
+        <y>80</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Pressure</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7" >
+      <property name="geometry" >
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Temperature</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8" >
+      <property name="geometry" >
+       <rect>
+        <x>230</x>
+        <y>110</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Humidity</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3" >
+      <property name="geometry" >
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_6" >
+      <property name="geometry" >
+       <rect>
+        <x>320</x>
+        <y>80</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4" >
+      <property name="geometry" >
+       <rect>
+        <x>320</x>
+        <y>50</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_7" >
+      <property name="geometry" >
+       <rect>
+        <x>320</x>
+        <y>140</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_8" >
+      <property name="geometry" >
+       <rect>
+        <x>320</x>
+        <y>170</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9" >
+      <property name="geometry" >
+       <rect>
+        <x>230</x>
+        <y>170</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Wind direction</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10" >
+      <property name="geometry" >
+       <rect>
+        <x>230</x>
+        <y>140</y>
+        <width>81</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Windspeed</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider" >
+      <property name="geometry" >
+       <rect>
+        <x>110</x>
+        <y>200</y>
+        <width>351</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation" >
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton" >
+      <property name="geometry" >
+       <rect>
+        <x>60</x>
+        <y>200</y>
+        <width>41</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Play</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2" >
+      <property name="geometry" >
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>41</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text" >
+       <string>Pause</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="map_view" >
+     <property name="geometry" >
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>467</width>
+       <height>233</height>
+      </rect>
+     </property>
+     <attribute name="title" >
+      <string>Map View</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>485</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSettings" >
+    <property name="title" >
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp" >
+    <property name="title" >
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuSettings" />
+   <addaction name="menuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>300</y>
+     <width>485</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

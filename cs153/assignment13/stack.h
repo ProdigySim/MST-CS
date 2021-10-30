@@ -1,0 +1,70 @@
+//////////////////////////////////////////////////////////////////////
+/// @file stack.h
+/// @author Michael Busby CS153 1B
+/// @brief Declaration for Stack class
+////////////////////////////////////////////////////////////////////// 
+#ifndef STACK_H
+#define STACK_H
+
+#include "exception.h"
+#include "snode.h"
+
+//////////////////////////////////////////////////////////////////////
+/// @class Stack
+/// @brief This class manages an expandable array of data of any 
+/// generic type
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Stack::push( generic )
+/// @brief This function adds an element to the Stack
+/// @pre Must have enough memory for one generic and a node pointer
+/// @post size is incremented and a new node is added to the stack
+/// @param x holds a variable to add of the same type as the class
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+/// @fn Stack::pop()
+/// @brief This function removes an element from the top of the Stack
+/// @pre stack size must be > 0
+/// @post size is decremented and an element is deleted from the 
+/// top of the Stack
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+/// @fn generic & Stack::top();
+/// @brief This function returns the first element of the Stack
+/// @pre size must be at least 1
+/// @post none
+/// @return generic element of from the front of the Stack
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn unsigned int Stack::size()
+/// @brief This function returns the number of elements in the Stack
+/// @return returns size of the Stack
+////////////////////////////////////////////////////////////////////// 
+
+//////////////////////////////////////////////////////////////////////
+/// @fn bool Stack::empty()
+/// @brief This function will check if the Stack is empty.
+/// @return returns true if empty, false if not empty
+//////////////////////////////////////////////////////////////////////
+
+#include "slist.h"
+
+template <class generic>
+class Stack : private Slist<generic>
+{
+  public:
+    Stack(){}
+    ~Stack(){}
+    void push( generic x );
+    void pop();
+    generic & top();
+    unsigned int size();
+    bool empty();
+};
+
+#include "stack.hpp"
+#endif
